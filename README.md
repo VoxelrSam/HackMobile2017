@@ -2,6 +2,9 @@
 
 
 # Dashboard README: 
+Maybe more helpful [documentation](https://adminlte.io/themes/AdminLTE/documentation/index.html)
+
+
 Introduction
 ============
 
