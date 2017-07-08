@@ -1,29 +1,19 @@
-function initMap() {
-  var center = {lat: 32.895770,lng: -117.193011};
-  var icon = {
-  	url:'http://www.orientini.com/1/images/blue-location-icon-location_icon.png',
-    scaledSize: new google.maps.Size(20, 20), // scaled size
-    origin: new google.maps.Point(0,0), // origin
-    anchor: new google.maps.Point(0, 0)
-  }
+function initialize() {
+  var curr_pos = {lat: 32.895770, lng: -117.193011};
   var map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 4,
-    center: center
+    center: curr_pos,
+    zoom: 14
   });
-  var features  = [
-  {
-  	position: center
-  }
-  ]
-  features.forEach(function(features) {
-    var marker = new google.maps.Marker({
-      position: features.position,
-      icon: icon,
-      map: map
-    });
-  });
-  
-  var st_vicente_de_paul = new google.maps.Marker({
+  var panorama = new google.maps.StreetViewPanorama(
+      document.getElementById('pano'), {
+        position: curr_pos,
+        pov: {
+          heading: 34,
+          pitch: 10
+        }
+      });
+  map.setStreetView(panorama);
+ var st_vicente_de_paul = new google.maps.Marker({
     position: {lat: 32.705992, lng: -117.149879},
     map: map
   });
