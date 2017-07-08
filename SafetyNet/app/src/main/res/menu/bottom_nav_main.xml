@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/food"
+        android:enabled="true"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_food"
+        android:title="Food"/>
+
+    <item
+        android:id="@+id/shelter"
+        android:enabled="true"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_home"
+        android:title="Shelter" />
+
+    <item
+        android:id="@+id/clinics"
+        android:enabled="true"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_clinics"
+        android:title="Clinics" />
+
+    <item
+        android:id="@+id/hygiene"
+        android:enabled="true"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_hygiene2"
+        android:title="Hygiene" />
+</menu>
