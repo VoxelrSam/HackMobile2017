@@ -39,6 +39,8 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
   
   <link rel="stylesheet" href="home.css">
+  <link rel="stylesheet" href="maps/map.css">
+  <script src="maps/specific_map.js"></script>
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
@@ -376,56 +378,41 @@
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
+  
+	<section class="content-header">
+      <h1>
+        Resoures
+        <small>Find Help</small>
+      </h1>
+    </section>
 
     <!-- Main content -->
     <section class="content">
 	
 	<div class="row">
-		<div class="col-md-1">
-		
-		</div>
+	<div class="col-md-10 col-md-offset-1">
+	<div class="box">
+			  <div class="box-header with-border">
+				<h3 class="box-title">Map</h3>
+				<!-- /.box-tools -->
+			  </div>
+			  <!-- /.box-header -->
+			  <div class="box-body">
 	
-		<div class="col-md-9">
-          <div class="box box-solid" style="margin-bottom:0px;">
-            <!-- /.box-header -->
-            <div class="box-body">
-              <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-                <ol class="carousel-indicators">
-                  <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                  <li data-target="#carousel-example-generic" data-slide-to="1" class=""></li>
-                  <li data-target="#carousel-example-generic" data-slide-to="2" class=""></li>
-                </ol>
-                <div class="carousel-inner">
-                  <div class="item active">
-					<div class="slider-size" style="height: 300px;">
-						<img src="http://www.sdrescue.org/wpsdrm/wp-content/uploads/2013/12/meals-banner-3.jpg" alt="First slide"  style="height: 100%;width: 100%;object-fit: cover;">
-					</div>
-                  </div>
-                  <div class="item">
-					<div class="slider-size" style="height: 300px;">
-						<img src="media/pic2.jpg" alt="Second slide"  style="height: 100%;width: 100%;object-fit: cover;">
-					</div>
-                  </div>
-                  <div class="item">
-					<div class="slider-size" style="height: 300px;">
-						<img src="media/pic3.jpg" alt="Third slide"  style="height: 100%;width: 100%;object-fit: cover;">
-					</div>
-                  </div>
-                </div>
-                <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
-                  <span class="fa fa-angle-left"></span>
-                </a>
-                <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
-                  <span class="fa fa-angle-right"></span>
-                </a>
-              </div>
-            </div>
-            <!-- /.box-body -->
-          </div>
-          <!-- /.box -->
+	<div class="row">
+	
+		<div class="col-md-10">
+          
+			<div id="map"></div>
+			<div id="pano"></div>
+			<!-- Replace the value of the key parameter with your own API key. -->
+			<script async defer
+				src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBn49Pslz3XxeLGjXy7iRrDhYLhjpQ8Reo&callback=initialize">
+			</script>
+		  
         </div>
 		
-		<div class="col-md-1" id="helpHome">
+		<div class="col-md-2">
 			<a class="btn btn-app btn-danger helpButtons">
 				<i class="ion ion-alert-circled"></i> Help
             </a>
@@ -433,106 +420,17 @@
 			<a class="btn btn-app btn-danger helpButtons">
 				<i class="ion ion-android-contact"></i> Hotline
             </a>
+			
+			<a class="btn btn-app btn-success contributeButtons">
+				<i class="ion ion-android-pin"></i> Contribute
+            </a>
 		</div>
 		
-		<div class="col-md-1">
-			
-		</div>
 	</div>
 	
-      <!-- Small boxes (Stat box) -->
-      <div class="row" style="margin-top:20px;">
-        <div class="col-lg-3 col-xs-6">
-          <!-- small box -->
-		  <a href="food.html">
-			  <div class="small-box bg-aqua">
-				<div class="inner">
-				  <h3>Food</h3>
-
-				  <p>Locate Food</p>
-				</div>
-				<div class="icon">
-				  <i class="ion ion-android-restaurant"></i>
-				</div>
-			  </div>
-		  </a>
-        </div>
-        <!-- ./col -->
-        <div class="col-lg-3 col-xs-6">
-          <!-- small box -->
-		  <a href="shelter.html">
-			  <div class="small-box bg-green">
-				<div class="inner">
-				  <h3>Shelter</h3>
-
-				  <p>Search Shelters</p>
-				</div>
-				<div class="icon">
-				  <i class="ion ion-home"></i>
-				</div>
-			  </div>
-		  </a>
-        </div>
-        <!-- ./col -->
-        <div class="col-lg-3 col-xs-6">
-          <!-- small box -->
-		  <a href="clinic.html">
-			  <div class="small-box bg-yellow">
-				<div class="inner">
-				  <h3>Clinic</h3>
-
-				  <p>Get Medical Help</p>
-				</div>
-				<div class="icon">
-				  <i class="ion ion-ios-body"></i>
-				</div>
-			  </div>
-		  </a>
-        </div>
-        <!-- ./col -->
-        <div class="col-lg-3 col-xs-6">
-          <!-- small box -->
-		  <a href="hygiene.html">
-			  <div class="small-box bg-red">
-				<div class="inner">
-				  <h3>Hygiene</h3>
-
-				  <p>Find Personal Care</p>
-				</div>
-				<div class="icon">
-				  <i class="ion ion-waterdrop"></i>
-				</div>
-			  </div>
-		  </a>
-        </div>
-        <!-- ./col -->
-      </div>
-      <!-- /.row -->
-	<div class="row">
-		<div class="col-md-10 col-md-offset-1">
-			<div class="box">
-			  <div class="box-header with-border">
-				<h3 class="box-title">Testimonials</h3>
-				<!-- /.box-tools -->
-			  </div>
-			  <!-- /.box-header -->
-			  <div class="box-body">
-				<img src="media/testimonial.jpg" width="200px;" style="float:left;margin-right:15px;"/>
-				
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non varius lectus. Fusce eu ex justo. Sed auctor diam eu orci egestas laoreet. Sed sed lorem rutrum tellus facilisis congue vitae ut quam. Maecenas iaculis, risus non lacinia pretium, dolor orci vestibulum urna, luctus eleifend sem sem et est. In commodo urna magna, sit amet consequat justo mollis at. Phasellus leo odio, eleifend et bibendum vel, tempor sed nulla. Mauris vulputate eget risus fermentum ornare. Aliquam lacinia nunc velit.
-
-					Praesent ut nisl varius, ultrices augue in, facilisis lorem. Pellentesque viverra sed nunc sed commodo. Integer eleifend nulla odio. Sed ultricies faucibus lorem, sit amet molestie ex blandit tempor. Morbi maximus dictum aliquam. Sed ut mauris posuere, rhoncus dui viverra, interdum lorem. Aenean a lorem eget dolor hendrerit mattis vel non magna.
-
-					Maecenas semper est massa, ut aliquet nunc vestibulum at. Phasellus interdum quam ac nisl tristique, sed congue leo ullamcorper. Maecenas at turpis at enim semper viverra. Nulla consectetur, arcu vitae maximus volutpat, nisl augue tempor sapien, at suscipit justo arcu ut odio. Aenean metus felis, posuere a mauris ut, egestas ultricies dolor. Pellentesque vitae euismod dolor. In ac nibh rhoncus, malesuada enim ut, suscipit odio. Nam malesuada lobortis elit in interdum.
-
-					Pellentesque varius orci vitae enim vestibulum bibendum. Praesent porttitor tincidunt pharetra. Suspendisse leo nunc, scelerisque non euismod et, sodales pulvinar arcu. Integer sollicitudin, sapien eget vehicula eleifend, ex purus auctor elit, et consectetur turpis neque quis augue. Pellentesque egestas, odio id dictum commodo, tellus lacus viverra nulla, ut laoreet felis sem et tellus. Vivamus ultrices imperdiet tincidunt. Nulla rutrum, lacus a tempor ornare, augue est iaculis tortor, eu hendrerit nisi erat id eros.
-
-					Pellentesque eget lacinia sem. Quisque vitae nulla id leo fermentum imperdiet a at ligula. Praesent congue pellentesque facilisis. Donec tempus felis sed odio lacinia, eget rhoncus augue porttitor. Quisque mattis maximus laoreet. Nulla sed ex eu risus vehicula tincidunt. Donec nunc nulla, sollicitudin id erat ac, bibendum dignissim nisl. Ut ipsum nibh, accumsan sit amet rutrum ut, molestie id arcu. Aliquam tempor ex massa, et porttitor turpis hendrerit ac. Aliquam nec augue quis est pellentesque sagittis vitae at justo.
-				</p>
-			  </div>
-			</div>
-		</div>
+	</div>
+	</div>
+	</div>
 	</div>
 
     </section>
