@@ -1,6 +1,8 @@
 package com.example.android.safetynet;
 
 import android.support.annotation.NonNull;
+import android.support.design.internal.BottomNavigationItemView;
+import android.support.design.internal.BottomNavigationMenuView;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -19,10 +21,10 @@ public class Web extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        webView = (WebView)findViewById(R.id.web_view);
+        webView = (WebView) findViewById(R.id.web_view);
         WebSettings webSettings = webView.getSettings();
         webSettings.setJavaScriptEnabled(true);
-        webView.loadUrl("https://developer.android.com/index.html");
+        webView.loadUrl("http://10.73.172.67:8000/home.html");
         webView.setWebViewClient(new WebViewClient());
 
         BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottom_nav);
@@ -34,24 +36,29 @@ public class Web extends AppCompatActivity {
                         switch (item.getItemId()) {
                             case R.id.food:
                                 // connect with link to food page
-                                Toast.makeText(Web.this, "FOOD", Toast.LENGTH_SHORT).show();
+                                webView.loadUrl("http://10.73.172.67:8000/food.html");
+                                webView.setWebViewClient(new WebViewClient());
                                 break;
                             case R.id.shelter:
                                 // connect with link to shelter page
-                                Toast.makeText(Web.this, "SHELTER", Toast.LENGTH_SHORT).show();
+                                webView.loadUrl("http://10.73.172.67:8000/shelter.html");
+                                webView.setWebViewClient(new WebViewClient());
                                 break;
                             case R.id.clinics:
                                 // connect with link to clinics page
-                                Toast.makeText(Web.this, "CLINICS", Toast.LENGTH_SHORT).show();
+                                webView.loadUrl("http://10.73.172.67:8000/clinic.html");
+                                webView.setWebViewClient(new WebViewClient());
                                 break;
                             case R.id.hygiene:
                                 // connect with link to hygiene page
-                                Toast.makeText(Web.this, "HYGIENE", Toast.LENGTH_SHORT).show();
+                                webView.loadUrl("http://10.73.172.67:8000/hygiene.html");
+                                webView.setWebViewClient(new WebViewClient());
                                 break;
                         }
                         return true;
                     }
                 });
+
 
     }
 
