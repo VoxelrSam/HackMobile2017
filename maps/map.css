@@ -1,0 +1,11 @@
+#map {
+  height: 400px;
+  width: 49%;
+  display:inline-block;
+}
+
+#pano {
+  height: 400px;
+  width: 50%;
+  display:inline-block;
+}

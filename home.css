@@ -1,0 +1,35 @@
+/* home.css */
+
+.carousel-indicators{
+	bottom:0px;
+}
+
+.carousel-control{
+	width:100px;
+}
+
+.helpButtons{
+	margin:20px 0 0 0;
+	background-color: #dd4b39;
+    border-color: #d73925;
+	color:white;
+}
+
+.helpButtons:hover{
+	background-color: #c44435;
+    border-color: #d73925;
+	color:white;
+}
+
+.contributeButtons{
+	margin:20px 0 0 0;
+	background-color: #00a65a;
+    border-color: #008d4c;
+	color:white;
+}
+
+.contributeButtons:hover{
+	background-color: #00914e;
+    border-color: #008d4c;
+	color:white;
+}
