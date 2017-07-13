@@ -19,6 +19,7 @@
 - Lack of knowledge about homeless people's daily lives
 
 # Future Goals
+- Tailor user features to also include refugees, victims of natural disasters, and others in need
 - Including a stack overflow-like thread where users can ask questions and give advice about various topics in the area (ex. what areas are dangerous, what resources proved to be most beneficial, etc.)
 - Distributing an interactive display equipped with our app to places struck by natural disasters/war/other crises to make sure victims get adequate support
 - Track user data so cities can help coordinate resources to people in need more efficiently
